@@ -74,8 +74,17 @@ let animalType = []
   ];
  * filterByCountMinimum([], 3); //> [] // returns empty array if input array is empty
  */
-function filterByCountMinimum(animals, minimum) {}
-
+function filterByCountMinimum(animals, minimum) {
+  let minAnimals = []
+  for (let i=0; i < animals.length; i++){
+    let cycle = animals[i].count
+    if(cycle >= minimum){
+      minAnimals.push(animals[i])
+    }
+  }
+return minAnimals
+}
+// console.log(filterByCountMinimum(animals,5))
 /**
  * FUNCTION DESCRIPTION
  * ------------------
