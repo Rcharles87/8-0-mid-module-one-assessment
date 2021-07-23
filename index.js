@@ -97,8 +97,20 @@ return minAnimals
  * getMostCommonAnimal(animals); //> { kind: "Chicken", count: 11 }
  * getMostCommonAnimal([]); //> null // returns null if the input is empty
  */
-function getMostCommonAnimal(animals) {}
-
+function getMostCommonAnimal(animals) {
+  let result = 0
+  let newObj = null
+  for (let i=0; i<animals.length;i++){
+    let check = animals[i].count
+    // console.log(check)
+    if(check > result){
+      result = check
+      newObj = animals[i]
+      }
+    }
+    return newObj
+  }
+console.log(getMostCommonAnimal(animals))
 // Do not change anything below this line.
 module.exports = {
   getTotalCount,
